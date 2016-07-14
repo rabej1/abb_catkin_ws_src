@@ -1,0 +1,13 @@
+<launch>
+
+  <node pkg="industry_comm" type="task_manager" name="task_manager_abb" >
+	<rosparam command="load" file="$(find industry_comm)/params/robot_params.yaml" />
+  </node>
+
+  <node pkg="industry_comm" type="task_publisher_server" name="task_publisher_abb" output="screen">
+	<rosparam command="load" file="$(find industry_comm)/params/robot_name_params.yaml" />
+  </node>
+
+
+</launch>
+
